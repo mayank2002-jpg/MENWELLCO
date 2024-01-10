@@ -1,15 +1,19 @@
-import React from "react";
-import logo from "../../assets/images/logo.jpg";
+import React, { useContext } from "react";
+import { ShopContext } from "../../context/shop-context";
+
 const Products = (props) => {
   const { id, productName, price, productImage } = props.data;
+  const { addToCart, cartItems } = useContext(ShopContext);
+
+  const cartItemAmount = cartItems[id];
+
   return (
     <>
-      {/* Product-1 */}
       <div
         key={id}
         className="w-full max-w-sm bg-white border border-gray-200 rounded-lg dark:bg-white dark:border-gray-700 m-10 shadow-lg"
       >
-        <a href="/">
+        <a>
           <img
             className="p-8 rounded-t-lg"
             src={productImage}
@@ -17,7 +21,7 @@ const Products = (props) => {
           />
         </a>
         <div className="px-5 pb-5">
-          <a href="/">
+          <a>
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-black">
               {productName}
             </h5>
@@ -78,8 +82,11 @@ const Products = (props) => {
             <span className="text-3xl font-bold text-gray-900 dark:text-black">
               {price}
             </span>
-            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Add to cart
+            <button
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              onClick={() => addToCart(id)}
+            >
+              Add to cart {cartItemAmount > 0 && <>({cartItemAmount})</>}
             </button>
           </div>
         </div>
@@ -87,5 +94,4 @@ const Products = (props) => {
     </>
   );
 };
-
 export default Products;
