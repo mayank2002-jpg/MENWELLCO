@@ -12,12 +12,23 @@ const CartItem = (props) => {
         <p> {productName}</p>
         <p>{price}</p>
         <div className="countHandler">
-          <button onClick={() => removeFromCart(id)}>-</button>
+          <button
+            className="bg-yellow-400 shadow-md w-16 h-12 rounded"
+            onClick={() => removeFromCart(id)}
+          >
+            -
+          </button>
           <input
+            className="border-2 border-black m-4 h-12"
             value={cartItems[id]}
             onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
           />
-          <button onClick={() => addToCart(id)}>+</button>
+          <button
+            className="bg-yellow-400 shadow-md w-16 h-12 rounded"
+            onClick={() => addToCart(id)}
+          >
+            +
+          </button>
         </div>
       </div>
     </div>

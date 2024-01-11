@@ -6,10 +6,9 @@
 }
 
 .cartItem {
-    width: 700px;
+    width: 600px;
     height: 250px;
     display: flex;
-
     align-items: center;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
@@ -18,17 +17,18 @@
 
 .cartItem img {
     width: 200px;
+    margin-right: 30px;
 }
 
-.cartItem .description {
+.cartItem .desc {
     width: 100%;
     font-size: 30px;
 }
 
 .countHandler input {
-    width: 40px;
+    width: 100px;
     text-align: center;
-    font-weight: bolder;
+    font-weight: medium;
 }
 
 .checkout button {

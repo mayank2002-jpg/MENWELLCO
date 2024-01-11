@@ -12,9 +12,9 @@ const Cart = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="cart">
+      <div className="cart container mx-auto mt-5">
         <div>
-          <h1>Your Cart items</h1>
+          <h1 className="text-3xl font-medium">Your Cart items</h1>
         </div>
         <div className="cartItems">
           {PRODUCTS.map((product) => {

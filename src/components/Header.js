@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../assets/images/logo.jpg";
-import CallIcon from "@mui/icons-material/Call";
 import Box from "@mui/material/Box";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
@@ -16,17 +15,18 @@ const Header = () => {
 
   return (
     <>
-      <nav className=" w-full container mx-auto px-4">
+      <nav className="w-full container mx-auto p-4 h-24 shadow-md">
         <Link to="/">
-          <img className="w-24 rounded-full mt-5" src={logo} alt="logo" />
+          <img className="w-20 rounded-full -mt-2" src={logo} alt="logo" />
         </Link>
-        <div className="flex justify-end -mt-20 space-x-10 items-center">
+        <div className="flex justify-end -mt-16 space-x-10 items-center">
           <div>
-            <Link to="/contact">
-              <button className="bg-yellow-400 rounded-md p-3 border-none cursor-pointer font-medium hover:bg-yellow-300">
-                Book Free Appointment
-              </button>
-            </Link>
+            <a
+              href="#contact"
+              className="bg-yellow-400 rounded-md p-3 border-none cursor-pointer font-medium hover:bg-yellow-300"
+            >
+              Book Free Appointment
+            </a>
           </div>
           <Box sx={{ display: "flex" }}>
             <Box>

@@ -12,11 +12,13 @@ import services from "../assets/images/services.avif";
 import Footer from "./Footer";
 import Products from "../pages/Shop/Products";
 import { PRODUCTS } from "../products";
+import Contact from "./Contact";
+import FAQ from "./FAQ";
 const Banner = () => {
   return (
     <>
       <section className="container mx-auto px-4 ">
-        <div className="mt-14 text-center " id="banner">
+        <div className="mt-4 text-center " id="banner">
           <h2 className="font-bold text-white text-6xl relative top-32">
             Mens Health. It's Our Speciality
           </h2>
@@ -25,9 +27,12 @@ const Banner = () => {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Voluptates, consequatur.
           </p>
-          <button className="bg-yellow-400 rounded-md p-3 border-none cursor-pointer font-medium relative top-48">
+          <a
+            href="#contact"
+            className="bg-yellow-400 rounded-md p-3 border-none cursor-pointer font-medium relative top-52 hover:bg-yellow-300"
+          >
             Book Free Appointment
-          </button>
+          </a>
         </div>
       </section>
       <div className=" container mx-auto flex items-center justify-around m-5">
@@ -163,65 +168,6 @@ const Banner = () => {
           </CardActionArea>
         </Card>
       </div>
-      <div className="container mx-auto flex justify-around mt-10">
-        <Card sx={{ maxWidth: 300 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={services}
-              alt="services"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Service 4
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                nostrum.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 300 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={services}
-              alt="services"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Service 5
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                nostrum.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 300 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={services}
-              alt="services"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Service 6
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                nostrum.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </div>
 
       {/* Products range */}
       <div className="container mx-auto">
@@ -260,7 +206,7 @@ const Banner = () => {
       </div>
 
       {/* Testimonials */}
-      <div className="container mx-auto text-center">
+      {/* <div className="container mx-auto text-center">
         <div className="flex justify-around m-10">
           <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
@@ -365,6 +311,14 @@ const Banner = () => {
             </div>
           </section>
         </div>
+      </div> */}
+
+      {/* FAQ */}
+      <FAQ />
+
+      {/* Contact */}
+      <div id="contact">
+        <Contact />
       </div>
 
       {/* Footer */}
