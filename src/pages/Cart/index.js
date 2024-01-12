@@ -5,10 +5,15 @@ import CartItem from "../Cart/cartItem";
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
 
+import Modal from "@mui/material/Modal";
+import Checkout from "../Checkout/checkout";
+
 const Cart = () => {
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
-
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const navigate = useNavigate();
   return (
     <>
@@ -27,7 +32,16 @@ const Cart = () => {
         <div className="checkout">
           <p>Subtotal: {totalAmount}/-</p>
           <button onClick={() => navigate("/")}>Continue Shopping</button>
-          <button>Checkout</button>
+
+          <button onClick={handleOpen}>Checkout</button>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Checkout />
+          </Modal>
         </div>
       </div>
     </>
