@@ -1,11 +1,15 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 
 const Products = (props) => {
   const { id, productName, price, productImage } = props.data;
-  const { addToCart, cartItems } = useContext(ShopContext);
+  const { addToCart, cartItems, removeFromCart } = useContext(ShopContext);
 
   const cartItemAmount = cartItems[id];
+  const [itemCount, setItemCount] = React.useState(0);
 
   return (
     <>
@@ -78,17 +82,47 @@ const Products = (props) => {
               5.0
             </span>
           </div>
-          <div className="flex items-center justify-between">
-            <span className="text-3xl font-bold text-gray-900 dark:text-black">
+          <div className="flex items-center justify-evenly">
+            <span className="text-3xl font-bold text-gray-900 dark:text-black flex items-center">
+              <CurrencyRupeeIcon sx={{ fontSize: "1.6rem", margin: "-5px" }} />
               {price}
             </span>
+
             <button
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              onClick={() => addToCart(id)}
+              onClick={() => {
+                if (itemCount === 0) {
+                  setItemCount(0);
+                } else {
+                  setItemCount((prevCounter) => prevCounter - 1);
+                  removeFromCart(id);
+                }
+              }}
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              Add to cart {cartItemAmount > 0 && <>({cartItemAmount})</>}
+              <RemoveIcon />
+            </button>
+            <span className="w-20 border-2 border-black text-center rounded-md">
+              {itemCount}
+            </span>
+            <button
+              onClick={() => {
+                setItemCount(itemCount + 1);
+                addToCart(id);
+              }}
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              <AddIcon />
             </button>
           </div>
+          <button
+            onClick={() => {
+              setItemCount(itemCount + 1);
+              addToCart(id);
+            }}
+            className="bg-black text-white w-80 p-3 mt-5 rounded-md cursor-pointer font-semibold hover:bg-yellow-500"
+          >
+            Add To Cart
+          </button>
         </div>
       </div>
     </>

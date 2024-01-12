@@ -1,29 +1,16 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
+import Logo from "../../assets/images/logo.jpg";
+import { Link } from "react-router-dom";
 const checkout = () => {
   return (
-    <Box sx={style}>
-      <Typography id="modal-modal-title" variant="h6" component="h2">
-        Checkout
-      </Typography>
-      <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-      </Typography>
-    </Box>
+    <>
+      <nav className="w-full container mx-auto flex justify-center items-center py-2 shadow-md">
+        <Link to="/">
+          <img className="w-14 rounded-full" src={Logo} alt="logo" />
+        </Link>
+      </nav>
+    </>
   );
 };
 

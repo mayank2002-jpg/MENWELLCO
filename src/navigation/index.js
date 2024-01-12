@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Cart from "../pages/Cart";
-import SignUp from "../pages/SignUP";
+import Checkout from "../pages/Checkout/checkout";
 import { ShopContextProvider } from "../context/shop-context";
 
 const Navigation = () => {
@@ -14,7 +14,7 @@ const Navigation = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </ShopContextProvider>
