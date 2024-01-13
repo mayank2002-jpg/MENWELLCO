@@ -31,12 +31,12 @@ const Header = () => {
           >
             Blog
           </a>
-          <a
+          <Link
+            to="/about"
             className="text-white text-xl hover:underline uppercase"
-            href="#about"
           >
             About
-          </a>
+          </Link>
           <div>
             <a
               href="#contact"

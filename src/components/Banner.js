@@ -203,20 +203,6 @@ const Banner = () => {
         </div>
       </div>
 
-      {/* About */}
-      <div className="container mx-auto flex justify-evenly m-10 p-4 text-center">
-        <img className="rounded-full" src={logo} alt="logo" />
-        <div className="flex flex-col text-center">
-          <h2 className="text-6xl font-semibold">About MenWell Co.</h2>
-          <p className="text-xl w-96 text-left mt-5">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam nulla
-            nisi officiis saepe repudiandae reiciendis aperiam non quidem culpa
-            laudantium neque alias, ipsa consequuntur quos quaerat! Maxime
-            ducimus sint soluta.
-          </p>
-        </div>
-      </div>
-
       {/* Testimonials */}
       {/* <div className="container mx-auto text-center">
         <div className="flex justify-around m-10">

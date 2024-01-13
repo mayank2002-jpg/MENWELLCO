@@ -5,7 +5,7 @@ import Login from "../pages/Login";
 import Cart from "../pages/Cart";
 import Checkout from "../pages/Checkout/checkout";
 import { ShopContextProvider } from "../context/shop-context";
-
+import About from "../pages/About/index";
 const Navigation = () => {
   return (
     <ShopContextProvider>
@@ -15,6 +15,7 @@ const Navigation = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </ShopContextProvider>
