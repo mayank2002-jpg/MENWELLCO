@@ -25,6 +25,18 @@ const Header = () => {
           <img className="w-24 rounded-full ml-6" src={logo} alt="logo" />
         </Link>
         <div className="flex justify-end -mt-16 mr-6 space-x-10 items-center">
+          <a
+            className="text-white text-xl hover:underline uppercase"
+            href="#blog"
+          >
+            Blog
+          </a>
+          <a
+            className="text-white text-xl hover:underline uppercase"
+            href="#about"
+          >
+            About
+          </a>
           <div>
             <a
               href="#contact"

@@ -35,66 +35,78 @@ const Banner = () => {
           </a>
         </div>
       </section>
-      <div className=" container mx-auto flex items-center justify-around m-5">
-        <Card sx={{ maxWidth: 300 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={aging}
-              alt="Reduce aging"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Reduce Aging
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                nostrum.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 300 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={brain}
-              alt="Enhance Brain"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Enhance Brain
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                nostrum.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 300 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={life}
-              alt="Optimize your life"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Optimize Your Life
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                nostrum.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </div>
+      <div id="blog">
+        <Typography
+          sx={{
+            textAlign: "center",
+            marginTop: "2.5rem",
+            textTransform: "uppercase",
+          }}
+          variant="h3"
+        >
+          Read our Latest Blog
+        </Typography>
 
+        <div className=" container mx-auto flex items-center justify-around m-5">
+          <Card sx={{ maxWidth: 300 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={aging}
+                alt="Reduce aging"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Reduce Aging
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime, nostrum.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+          <Card sx={{ maxWidth: 300 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={brain}
+                alt="Enhance Brain"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Enhance Brain
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime, nostrum.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+          <Card sx={{ maxWidth: 300 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={life}
+                alt="Optimize your life"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Optimize Your Life
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime, nostrum.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </div>
+      </div>
       {/* Services */}
       <div>
         <img
