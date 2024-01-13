@@ -6,7 +6,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const FAQ = () => {
   return (
     <div className="container mx-auto px-4 max-w-5xl m-16">
-      <h1 className="text-center text-4xl">Frequntly Asked Questions?</h1>
+      <h1 className="text-center text-4xl mb-10">Frequntly Asked Questions?</h1>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

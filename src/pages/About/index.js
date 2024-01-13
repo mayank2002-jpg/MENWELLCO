@@ -15,7 +15,6 @@ import delivery from "../../assets/icons/freeDelivery.png";
 import price from "../../assets/icons/betterPrice.png";
 import freeliving from "../../assets/icons/preservative.png";
 import artifical from "../../assets/icons/noArtificial.png";
-import transitions from "@material-ui/core/styles/transitions";
 const About = () => {
   return (
     <>

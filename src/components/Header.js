@@ -20,24 +20,27 @@ const Header = () => {
       <div className="bg-yellow-400 text-center font-semibold p-1">
         Get 5% Off on All Orders
       </div>
-      <nav className="w-full container mx-auto h-24  bg-black sticky top-0 z-50">
+      <nav
+        className="w-full container mx-auto h-24  bg-black sticky top-0 z-50"
+        id="navbar"
+      >
         <Link to="/">
           <img className="w-24 rounded-full ml-6" src={logo} alt="logo" />
         </Link>
         <div className="flex justify-end -mt-16 mr-6 space-x-10 items-center">
           <a
-            className="text-white text-xl hover:underline uppercase"
+            className="text-white text-xl hover:underline uppercase media"
             href="#blog"
           >
             Blog
           </a>
           <Link
             to="/about"
-            className="text-white text-xl hover:underline uppercase"
+            className="text-white text-xl hover:underline uppercase media"
           >
             About
           </Link>
-          <div>
+          <div id="book">
             <a
               href="#contact"
               className="bg-yellow-400 rounded-md p-3 border-none cursor-pointer font-medium hover:bg-yellow-300"

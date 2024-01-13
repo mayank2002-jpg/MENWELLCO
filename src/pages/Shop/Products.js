@@ -14,6 +14,7 @@ const Products = (props) => {
   return (
     <>
       <div
+        id="productsize"
         key={id}
         className="w-full max-w-sm bg-white border border-gray-200 rounded-lg dark:bg-white dark:border-gray-700 m-10 shadow-lg"
       >
@@ -115,6 +116,7 @@ const Products = (props) => {
             </button>
           </div>
           <button
+            id="cartButton"
             onClick={() => {
               setItemCount(itemCount + 1);
               addToCart(id);
