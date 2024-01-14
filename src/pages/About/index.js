@@ -33,7 +33,7 @@ const About = () => {
           <Typography variant="h3" gutterBottom>
             About MenWell Co.
           </Typography>
-          <p className="text-lg w-96 text-center mx-auto sm:text-lg sm:text-center sm:w-10/12">
+          <p className="text-lg w-96 text-left mx-auto sm:text-lg sm:w-10/12 sm:text-left">
             Welcome to Menwell Squad pvt ltd., your premier destination for
             men's sexual wellness. At Menwell, we believe in empowering men to
             thrive physically, mentally, and emotionally. We recognize that
@@ -62,7 +62,7 @@ const About = () => {
       <Typography sx={{ textAlign: "center" }} variant="h2" gutterBottom>
         How are we Better !
       </Typography>
-      <div className="container mx-auto flex flex-col items-center justify-center space-y-6 sm:flex-row sm:justify-around">
+      <div className="container mx-auto flex flex-col items-center justify-around space-y-6 sm:flex-row sm:justify-evenly sm:-space-x-10">
         <Card sx={{ maxWidth: 200, maxHeight: 350 }}>
           <CardActionArea>
             <CardMedia
@@ -123,7 +123,7 @@ const About = () => {
       <div className="container mx-auto mt-14 flex flex-col justify-center items-center px-24 sm:flex-row sm:justify-around">
         <div className="p-4 max-w-72 text-center">
           <Typography variant="h4">Who we are</Typography>
-          <p>A Bunch of Health Conscious Consumers turned Entrepreneurs</p>
+          <p>India's 1st Men's sexual wellness Brand</p>
         </div>
         <div className="p-4 max-w-72 text-center">
           <Typography variant="h4">Our Purpose</Typography>
@@ -142,50 +142,75 @@ const About = () => {
       </div>
 
       <div className="container mx-auto flex flex-col justify-center items-center space-y-4 p-6 mt-10 sm:flex-row sm:space-x-6">
-        <div className="border-2 border-black w-64 h-72 p-2 flex flex-col justify-center items-center rounded-xl shadow-lg shadow-slate-500  ">
-          <Typography variant="h5">100% Authentic Products</Typography>
+        <div className="border-2 border-black w-64 h-72 p-2 flex flex-col justify-center items-center rounded-xl shadow-lg shadow-slate-500 ">
+          <Typography
+            variant="h5"
+            sx={{ textAlign: "center", fontWeight: "bold" }}
+          >
+            100% Authentic Products
+          </Typography>
           <img
             className="max-w-28 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-75 ..."
             src={authentic}
             alt="authentic"
           />
-          <p className="text-xl">Handpicked from Honest Brands</p>
+          <p className="text-xl text-center">Handpicked from Honest Brands</p>
         </div>
         <div className="border-2 border-black w-64 h-72 p-2 flex flex-col justify-center items-center rounded-xl shadow-lg shadow-slate-500">
-          <Typography variant="h5">Free delivery</Typography>
+          <Typography
+            variant="h5"
+            sx={{ textAlign: "center", fontWeight: "bold" }}
+          >
+            Free delivery
+          </Typography>
           <img
             className="max-w-28 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-75 ..."
             src={delivery}
             alt="delivery"
           />
-          <p className="text-xl">On all orders ₹199</p>
+          <p className="text-xl text-center">On all orders ₹199</p>
         </div>
         <div className="border-2 border-black w-64 h-72 p-2 flex flex-col justify-center items-center rounded-xl shadow-lg shadow-slate-500">
-          <Typography variant="h5">Better Prices</Typography>
+          <Typography
+            variant="h5"
+            sx={{ textAlign: "center", fontWeight: "bold" }}
+          >
+            Better Prices
+          </Typography>
           <img
             className="max-w-28 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-75 ..."
             src={price}
             alt="price"
           />
-          <p className="text-xl">Exclusive Discounts Everyday</p>
+          <p className="text-xl text-center">Exclusive Discounts Everyday</p>
         </div>
         <div className="border-2 border-black w-64 h-72 p-2 flex flex-col justify-center items-center rounded-xl shadow-lg shadow-slate-500">
-          <Typography variant="h5">Preservative Free Living</Typography>
+          <Typography
+            variant="h5"
+            sx={{ textAlign: "center", fontWeight: "bold" }}
+          >
+            Preservative Free Living
+          </Typography>
           <img
             className="max-w-28 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-75 ..."
             src={freeliving}
             alt="living"
           />
-          <p className="text-xl">Say No to Harmful Chemicals</p>
+          <p className="text-xl text-center">Say No to Harmful Chemicals</p>
         </div>
         <div className="border-2 border-black w-64 h-72 p-2 flex flex-col justify-center items-center rounded-xl shadow-lg shadow-slate-500">
-          <Typography variant="h5">No Artifical Sweetners</Typography>
+          <Typography
+            variant="h5"
+            sx={{ textAlign: "center", fontWeight: "bold" }}
+          >
+            No Artifical Sweetners
+          </Typography>
           <img
             className="max-w-28 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-75 ..."
             src={artifical}
             alt="artificial"
           />
-          <p className="text-xl">Say Yes to Better Living</p>
+          <p className="text-xl text-center">Say Yes to Better Living</p>
         </div>
       </div>
       <Footer />
