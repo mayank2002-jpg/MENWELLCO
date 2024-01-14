@@ -128,7 +128,8 @@ const About = () => {
         <div className="p-4 max-w-72 text-center">
           <Typography variant="h4">Our Purpose</Typography>
           <p>
-            Building an online store every Indian consumer can blindly trust
+            World where men confidently embrace their journey towards optimal
+            well-being.
           </p>
         </div>
         <div className="p-4 max-w-72 text-center">
