@@ -71,8 +71,57 @@ const FAQ = () => {
         </AccordionSummary>
         <hr />
         <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
+          <span>
+            At Menwell Co, we are committed to your satisfaction and stand
+            behind the quality of our products. Our refund policy is designed to
+            be fair and transparent, ensuring that you have confidence in every
+            purchase you make with us. Please take a moment to review our refund
+            policy:
+          </span>
+          <br />
+          <span>
+            <b> 30-Day Satisfaction Guarantee:</b> We offer a 30-day
+            satisfaction guarantee on all our products. If you are not
+            completely satisfied with your purchase, you may return it within 30
+            days of the delivery date for a full refund or exchange. To be
+            eligible for a return, the product must be in its original
+            packaging, unused, and in the same condition as received.
+          </span>
+          <br />
+          <span>
+            <b>Easy Return Process: </b>To initiate a return, simply contact our
+            customer support team at menwellco@gmail.com with your order number
+            and the reason for return. Our team will guide you through the
+            return process and provide you with a return shipping label.
+          </span>
+          <br />
+          <span>
+            <b> Refund Processing Time:</b> Once we receive your returned item,
+            our team will inspect it to ensure it meets our return criteria.
+            Upon approval, your refund will be processed, and a credit will
+            automatically be applied to your original method of payment. Please
+            allow 5-7 business days for the refund to reflect in your account.
+          </span>
+          <br />
+          <span>
+            <b> Damaged or Defective Items:</b> In the rare event that you
+            receive a damaged or defective item, please contact us immediately
+            with photos of the product and packaging. We will promptly send a
+            replacement or issue a refund, whichever you prefer
+          </span>
+          <br />
+          <span>
+            <b>Contact Us:</b> If you have any questions or concerns regarding
+            our refund policy, feel free to reach out to our customer support
+            team at customer_support@menwellco.com. We are here to assist you
+            and ensure your experience with Menwell Co exceeds your
+            expectations.
+          </span>
+          <br />
+          <p>
+            Thank you for choosing Menwell Co for your sexual wellness needs.
+            Your satisfaction is our priority.
+          </p>
         </AccordionDetails>
       </Accordion>
       <Accordion>

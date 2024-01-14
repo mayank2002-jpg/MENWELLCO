@@ -144,9 +144,8 @@ const Banner = () => {
           Evaluate your sexual wellness
         </h2>
         <p className="text-white px-4 sm:text-2xl sm:max-w-2/3 sm:text-center sm:mx-auto sm:-mt-5">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-          consectetur modi amet ducimus, provident voluptates impedit saepe
-          voluptatum fugiat laborum.
+          "Take the first step towards a healthier, happier you – Evaluate your
+          sexual wellness with our confidential and empowering assessment form."
         </p>
         <a
           href="#googleform"
