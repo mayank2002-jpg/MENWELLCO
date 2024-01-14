@@ -8,7 +8,6 @@ import brain from "../assets/images/brain.avif";
 import aging from "../assets/images/aging.avif";
 import life from "../assets/images/life.avif";
 import logo from "../assets/images/logo.jpg";
-import services from "../assets/images/services.avif";
 import Footer from "./Footer";
 import Products from "../pages/Shop/Products";
 import { PRODUCTS } from "../products";
@@ -137,68 +136,24 @@ const Banner = () => {
           our Services
         </h3>
       </div>
-      <div id="service" className="container mx-auto flex justify-around mt-10">
-        <div id="service1">
-          <Card sx={{ maxWidth: 300 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={services}
-                alt="services"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Service 1
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime, nostrum.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </div>
-        <div id="service2">
-          <Card sx={{ maxWidth: 300 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={services}
-                alt="services"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Service 2
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime, nostrum.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </div>
-        <Card sx={{ maxWidth: 300 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={services}
-              alt="services"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Service 3
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                nostrum.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+      <div
+        id="service"
+        className="container mx-auto flex justify-around mt-10 sm:flex-col sm:text-center sm:items-center"
+      >
+        <h2 className="font-bold text-white text-5xl p-4 ">
+          Evaluate your sexual wellness
+        </h2>
+        <p className="text-white px-4 sm:text-2xl sm:max-w-2/3 sm:text-center sm:mx-auto sm:-mt-5">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+          consectetur modi amet ducimus, provident voluptates impedit saepe
+          voluptatum fugiat laborum.
+        </p>
+        <a
+          href="#googleform"
+          className="bg-yellow-400 rounded-md p-3 border-none cursor-pointer font-medium mt-10 hover:bg-yellow-300 sm:w-60 sm:mx-auto sm:-mt-10"
+        >
+          Click Here Now
+        </a>
       </div>
 
       {/* Products range */}

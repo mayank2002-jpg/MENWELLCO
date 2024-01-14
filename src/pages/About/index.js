@@ -34,10 +34,28 @@ const About = () => {
             About MenWell Co.
           </Typography>
           <p className="text-lg w-96 text-center mx-auto sm:text-lg sm:text-center sm:w-10/12">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam nulla
-            nisi officiis saepe repudiandae reiciendis aperiam non quidem culpa
-            laudantium neque alias, ipsa consequuntur quos quaerat! Maxime
-            ducimus sint soluta.
+            Welcome to Menwell Squad pvt ltd., your premier destination for
+            men's sexual wellness. At Menwell, we believe in empowering men to
+            thrive physically, mentally, and emotionally. We recognize that
+            well-being is a lifelong journey, and we are dedicated to being your
+            unwavering companion on that path. As advocates for holistic
+            well-being, we strive to break down stigmas surrounding men's sexual
+            health and create an open, judgment-free space where you can
+            prioritize your wellness. Whether you're seeking solutions for
+            physical vitality, mental resilience, or emotional fulfillment,
+            Menwell Squad is your trusted partner. Our commitment to excellence
+            extends to the selection of products we offer. We meticulously
+            curate a range of high-quality items that align with our values and
+            commitment to your well-being. From supplements that support
+            physical vitality to resources that nurture mental and emotional
+            resilience, our products are designed to meet the diverse needs of
+            the modern man. At Menwell Squad, we envision a world where men
+            confidently embrace their journey towards optimal well-being. Our
+            team is comprised of passionate individuals dedicated to providing
+            you with the tools and knowledge needed to navigate this journey
+            successfully. Join us on the path to thriving health, balance, and
+            confidence. Explore Menwell Squad, where your well-being is our
+            priority.
           </p>
         </div>
       </div>
@@ -115,7 +133,10 @@ const About = () => {
         </div>
         <div className="p-4 max-w-72 text-center">
           <Typography variant="h4">Our mission</Typography>
-          <p>To Help Indians Discover and Consume Better</p>
+          <p>
+            our mission is to empower men to thrive physically, mentally, and
+            emotionally.
+          </p>
         </div>
       </div>
 
