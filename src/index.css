@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.react-tel-input .form-control {
+    @apply !w-full py-6 !text-base;
+  }
+
 body,
 html {
     height: 100%;
     scroll-behavior: smooth;
 }
+
 
 
 
