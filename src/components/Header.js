@@ -1,19 +1,22 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import logo from "../assets/images/logo.jpg";
 import Box from "@mui/material/Box";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
 import Badge from "@mui/material/Badge";
+import { ShopContext } from "../context/shop-context";
 
 const Header = () => {
   const [isHovering, setIsHovering] = useState(false);
-  const [itemCount, setItemCount] = React.useState(0);
+  const { cartItems } = useContext(ShopContext);
   const handleMouseEnter = () => {
     setIsHovering(true);
   };
   const handleMouseOut = () => {
     setIsHovering(false);
   };
+
+  const cartItemsCount = Object.values(cartItems).reduce((acc, curr) => acc + curr, 0);
 
   return (
     <>
@@ -50,7 +53,7 @@ const Header = () => {
           </div>
           <Box sx={{ display: "flex" }}>
             <Box>
-              <Badge badgeContent={itemCount} color="primary">
+              <Badge badgeContent={cartItemsCount} color="primary">
                 <Link to="/cart">
                   <ShoppingCartIcon
                     sx={{

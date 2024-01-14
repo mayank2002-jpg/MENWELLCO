@@ -88,32 +88,6 @@ const Products = (props) => {
               <CurrencyRupeeIcon sx={{ fontSize: "1.6rem", margin: "-5px" }} />
               {price}
             </span>
-
-            <button
-              onClick={() => {
-                if (itemCount === 0) {
-                  setItemCount(0);
-                } else {
-                  setItemCount((prevCounter) => prevCounter - 1);
-                  removeFromCart(id);
-                }
-              }}
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              <RemoveIcon />
-            </button>
-            <span className="w-20 border-2 border-black text-center rounded-md">
-              {itemCount}
-            </span>
-            <button
-              onClick={() => {
-                setItemCount(itemCount + 1);
-                addToCart(id);
-              }}
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              <AddIcon />
-            </button>
           </div>
           <button
             id="cartButton"
