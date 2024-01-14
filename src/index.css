@@ -4,7 +4,7 @@
 
 .react-tel-input .form-control {
     @apply !w-full py-6 !text-base;
-  }
+}
 
 body,
 html {
@@ -91,7 +91,7 @@ html {
     }
 
     #cartButton {
-        width: 50%;
+        width: 100%;
 
     }
 

@@ -23,11 +23,17 @@ const About = () => {
           <img className="w-14 rounded-full" src={Logo} alt="logo" />
         </Link>
       </nav>
-      <div className="container mx-auto flex justify-evenly m-10 p-4 text-center">
-        <img className="rounded-full" src={Logo} alt="logo" />
+      <div className="container mx-auto flex justify-around flex-col m-4 p-6 text-center sm:flex-row sm:px-10 sm:items-center">
+        <img
+          className="rounded-full w-96 mx-auto mb-10 sm:w-96 sm:mb-0"
+          src={Logo}
+          alt="logo"
+        />
         <div className="flex flex-col text-center">
-          <Typography variant="h2">About MenWell Co.</Typography>
-          <p className="text-xl w-96 text-left mt-5">
+          <Typography variant="h3" gutterBottom>
+            About MenWell Co.
+          </Typography>
+          <p className="text-lg w-96 text-center mx-auto sm:text-lg sm:text-center sm:w-10/12">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam nulla
             nisi officiis saepe repudiandae reiciendis aperiam non quidem culpa
             laudantium neque alias, ipsa consequuntur quos quaerat! Maxime
@@ -38,7 +44,7 @@ const About = () => {
       <Typography sx={{ textAlign: "center" }} variant="h2" gutterBottom>
         How are we Better !
       </Typography>
-      <div className="container mx-auto flex justify-center space-x-32">
+      <div className="container mx-auto flex flex-col items-center justify-center space-y-6 sm:flex-row sm:justify-around">
         <Card sx={{ maxWidth: 200, maxHeight: 350 }}>
           <CardActionArea>
             <CardMedia
@@ -96,7 +102,7 @@ const About = () => {
         </Card>
       </div>
 
-      <div className="container mx-auto mt-14 flex justify-center px-24">
+      <div className="container mx-auto mt-14 flex flex-col justify-center items-center px-24 sm:flex-row sm:justify-around">
         <div className="p-4 max-w-72 text-center">
           <Typography variant="h4">Who we are</Typography>
           <p>A Bunch of Health Conscious Consumers turned Entrepreneurs</p>
@@ -113,8 +119,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container mx-auto flex justify-center space-x-6 p-6 mt-10">
-        <div className="border-2 border-black w-64 h-72 p-2 flex flex-col justify-center items-center rounded-xl shadow-lg shadow-slate-500   ">
+      <div className="container mx-auto flex flex-col justify-center items-center space-y-4 p-6 mt-10 sm:flex-row sm:space-x-6">
+        <div className="border-2 border-black w-64 h-72 p-2 flex flex-col justify-center items-center rounded-xl shadow-lg shadow-slate-500  ">
           <Typography variant="h5">100% Authentic Products</Typography>
           <img
             className="max-w-28 transition ease-in-out delay-0 hover:-translate-y-1 hover:scale-110 duration-75 ..."
@@ -160,7 +166,6 @@ const About = () => {
           <p className="text-xl">Say Yes to Better Living</p>
         </div>
       </div>
-
       <Footer />
     </>
   );

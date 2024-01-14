@@ -14,6 +14,8 @@ import Products from "../pages/Shop/Products";
 import { PRODUCTS } from "../products";
 import Contact from "./Contact";
 import FAQ from "./FAQ";
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
     <>
@@ -53,38 +55,63 @@ const Banner = () => {
           className=" container mx-auto flex items-center justify-around m-5"
         >
           <div id="blog1">
-            <Card sx={{ maxWidth: 300 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={aging}
-                  alt="Reduce aging"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Reduce Aging
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Maxime, nostrum.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
+            <Link to="/blog1">
+              <Card sx={{ maxWidth: 300 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image={aging}
+                    alt="Reduce aging"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Reduce Aging
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Maxime, nostrum.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Link>
           </div>
           <div id="blog2">
+            <Link to="/blog2">
+              <Card sx={{ maxWidth: 300 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image={brain}
+                    alt="Enhance Brain"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Enhance Brain
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Maxime, nostrum.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Link>
+          </div>
+          <Link to="/blog3">
             <Card sx={{ maxWidth: 300 }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
                   height="140"
-                  image={brain}
-                  alt="Enhance Brain"
+                  image={life}
+                  alt="Optimize your life"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Enhance Brain
+                    Optimize Your Life
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -93,26 +120,7 @@ const Banner = () => {
                 </CardContent>
               </CardActionArea>
             </Card>
-          </div>
-          <Card sx={{ maxWidth: 300 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={life}
-                alt="Optimize your life"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Optimize Your Life
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime, nostrum.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+          </Link>
         </div>
       </div>
       {/* Services */}

@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 
 const Products = (props) => {
@@ -83,7 +81,7 @@ const Products = (props) => {
               5.0
             </span>
           </div>
-          <div className="flex items-center justify-evenly">
+          <div>
             <span className="text-3xl font-bold text-gray-900 dark:text-black flex items-center">
               <CurrencyRupeeIcon sx={{ fontSize: "1.6rem", margin: "-5px" }} />
               {price}

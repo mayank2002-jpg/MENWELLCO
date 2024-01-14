@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import logo from "../assets/images/logo.jpg";
 import Box from "@mui/material/Box";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -16,7 +16,10 @@ const Header = () => {
     setIsHovering(false);
   };
 
-  const cartItemsCount = Object.values(cartItems).reduce((acc, curr) => acc + curr, 0);
+  const cartItemsCount = Object.values(cartItems).reduce(
+    (acc, curr) => acc + curr,
+    0
+  );
 
   return (
     <>

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/images/logo.jpg";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-white dark:bg-gray-900">
@@ -45,6 +46,18 @@ const Footer = () => {
                   <a href="#" className="hover:underline">
                     Terms &amp; Conditions
                   </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                About MenWell Co.
+              </h2>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-4">
+                  <Link to="/about" className="hover:underline">
+                    About Us
+                  </Link>
                 </li>
               </ul>
             </div>
