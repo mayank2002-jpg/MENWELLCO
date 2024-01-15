@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import Box from "@mui/material/Box";
 import Logo from "../../assets/images/logo.jpg";
 import { Link } from "react-router-dom";
@@ -10,7 +10,15 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Footer from "../../components/Footer";
-const checkout = () => {
+import AuthContext from "../../context/AuthProvider";
+const Checkout = () => {
+  let authorize = false
+  const { auth,setAuth } = useContext(AuthContext)
+  if(auth === null || Object.keys(auth).length === 0){
+    authorize=false
+  }else{
+    authorize=true
+  }
   return (
     <>
       <nav className="w-full container mx-auto flex justify-center items-center py-2 shadow-md">
@@ -25,7 +33,7 @@ const checkout = () => {
         <p className="text-lg font-semibold p-2 mt-5 text-white bg-red-500">
           Please review your order before making the payment.
         </p>
-        <div className="border-2 border-black p-2 mt-5">
+        <div hidden={authorize} className="border-2 border-black p-2 mt-5">
           <h4 className="text-xl font-medium">Are you an existing customer?</h4>
           <Link to="/login" className="uppercase hover:underline">
             Sign In
@@ -124,4 +132,4 @@ const checkout = () => {
   );
 };
 
-export default checkout;
+export default Checkout;

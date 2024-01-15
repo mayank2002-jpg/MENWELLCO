@@ -28,6 +28,8 @@
     "react-icons": "^4.7.1",
     "react-phone-input-2": "^2.15.1",
     "react-scripts": "5.0.1",
+    "react-alert": "^7.0.3",
+    "react-alert-template-basic": "^1.0.2",
     "styled-components": "^6.1.6",
     "sweetalert2": "^11.10.3",
     "web-vitals": "^2.1.4"

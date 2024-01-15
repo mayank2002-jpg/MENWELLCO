@@ -2,13 +2,14 @@ import React, { useState, useContext } from "react";
 import logo from "../assets/images/logo.jpg";
 import Box from "@mui/material/Box";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import { ShopContext } from "../context/shop-context";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-
+import AuthContext from "../context/AuthProvider";
+import { useAlert } from 'react-alert'
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Products", href: "#products" },
@@ -23,6 +24,23 @@ function classNames(...classes) {
 }
 
 const Header = () => {
+  const alert = useAlert()
+  let authorize = false
+  const { auth,setAuth } =useContext(AuthContext)
+  const navigate  = useNavigate()
+  if(auth === null || Object.keys(auth).length === 0){
+    authorize=false
+  }else{
+    authorize=true
+  }
+  const handleLogout = () => {
+    setAuth(false);
+    alert.success("Logged Out Successfully")
+    navigate('/', { state: { authorize: false } });
+  };
+
+
+
   const [isHovering, setIsHovering] = useState(false);
   const { cartItems } = useContext(ShopContext);
   const handleMouseEnter = () => {
@@ -114,20 +132,39 @@ const Header = () => {
                   </Badge>
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
-                    <Link
-                      to="/login"
-                      style={{
-                        textDecoration: isHovering ? "underline" : "none",
-                        paddingLeft: "15px",
-                        marginRight: "10px",
-                        fontSize: "1.25rem",
-                        color: "white",
-                      }}
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseOut}
-                    >
-                      Account
-                    </Link>
+                  {authorize ? (
+          // Render logout link
+          <Link
+            onClick={handleLogout} // Call the handleLogout function on click
+            style={{
+              textDecoration: isHovering ? "underline" : "none",
+              paddingLeft: "15px",
+              marginRight: "10px",
+              fontSize: "1.25rem",
+              color: "white",
+            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseOut}
+          >
+            Logout
+          </Link>
+        ) : (
+          // Render login link
+          <Link
+            to="/login"
+            style={{
+              textDecoration: isHovering ? "underline" : "none",
+              paddingLeft: "15px",
+              marginRight: "10px",
+              fontSize: "1.25rem",
+              color: "white",
+            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseOut}
+          >
+            Account
+          </Link>
+        )}
                   </Menu>
                 </div>
               </div>
