@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React,{useContext,useState} from "react";
 import Box from "@mui/material/Box";
 import Logo from "../../assets/images/logo.jpg";
 import { Link } from "react-router-dom";
@@ -12,7 +12,9 @@ import FormLabel from "@mui/material/FormLabel";
 import Footer from "../../components/Footer";
 import AuthContext from "../../context/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 const Checkout = () => {
+
   let authorize = false
   const { auth,setAuth } = useContext(AuthContext)
   if(auth === null || Object.keys(auth).length === 0){
@@ -20,7 +22,81 @@ const Checkout = () => {
   }else{
     authorize=true
   }
+  const [formValid, setFormValid] = useState(false);
+  const validateForm = () => {
+    // Add your validation logic here
+    const isValid = user.Email.trim() !== '' &&
+                    user.FirstName.trim() !== '' &&
+                    user.LastName.trim() !== '' &&
+                    user.Address.trim() !== '' &&
+                    user.Landmark.trim() !== '' &&
+                    user.Pincode.trim() !== '' &&
+                    user.City.trim() !== '' &&
+                    user.State.trim() !== '' ;
 
+    setFormValid(isValid);
+  };
+  const [user,setUser] = useState(
+    {
+      Email:'',FirstName:'',LastName:'',Address:'',Landmark:'',Pincode:'',City:'',State:''
+    }
+  )
+  let name,value
+  const data = (e) => {
+    name = e.target.name;
+    value = e.target.value;
+    setUser({...user,[name]:value})
+    validateForm();
+  }
+
+  const getdata = async (e)=>{
+    const {Email,FirstName,LastName,Address,Landmark,Pincode,City,State} = user;
+      e.preventDefault();
+      if (!formValid) {
+        // Display an error message or handle invalid form
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Incorrect Data",
+          footer: '<a href="#">Why do I have this issue?</a>'
+        });
+        return;
+      }
+      if(!authorize){
+        // Display an error message or handle invalid form
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "First Sign In",
+          footer: '<a href="#">Why do I have this issue?</a>'
+        });
+        return;  
+      }
+      const options = {
+        method : 'POST',
+        headers:{
+          'Content-Type':'application/json'
+        },
+        body: JSON.stringify({
+          Email,FirstName,LastName,Address,Landmark,Pincode,City,State
+        })
+      }
+      const res = await fetch(
+        'https://menwellco-phone-auth-default-rtdb.firebaseio.com/OrderData.json',
+        options
+      )
+      if(res){
+        Swal.fire("Order Placed!");
+      }
+      else{
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: '<a href="#">Why do I have this issue?</a>'
+        });
+      }
+  }
 
   return (
     <>
@@ -54,6 +130,9 @@ const Checkout = () => {
             label="Email"
             variant="standard"
             placeholder="Enter Your Email"
+            name="Email"
+            value={ user.Email }
+            onChange={ data }
           />
           <TextField
             required
@@ -61,6 +140,9 @@ const Checkout = () => {
             label="First Name"
             variant="standard"
             placeholder="Enter Your First Name"
+            name="FirstName"
+            value={ user.FirstName }
+            onChange={ data }
           />
           <TextField
             required
@@ -68,6 +150,9 @@ const Checkout = () => {
             label="Last Name"
             variant="standard"
             placeholder="Enter Your Last Name"
+            name="LastName"
+            value={ user.LastName }
+            onChange={ data }
           />
           <TextField
             required
@@ -75,6 +160,9 @@ const Checkout = () => {
             label="Shipping Address"
             variant="standard"
             placeholder="Enter Your Address"
+            name="Address"
+            value={ user.Address }
+            onChange={ data }
           />
           <TextField
             required
@@ -82,6 +170,9 @@ const Checkout = () => {
             label="Landmark"
             variant="standard"
             placeholder="Enter Your Landmark"
+            name="Landmark"
+            value={ user.Landmark }
+            onChange={ data }
           />
           <TextField
             required
@@ -89,6 +180,9 @@ const Checkout = () => {
             label="Pincode"
             variant="standard"
             placeholder="Enter Your Pincode"
+            name="Pincode"
+            value={ user.Pincode }
+            onChange={ data }
           />
           <TextField
             required
@@ -96,6 +190,9 @@ const Checkout = () => {
             label="City"
             variant="standard"
             placeholder="Enter Your City"
+            name="City"
+            value={ user.City }
+            onChange={ data }
           />
           <TextField
             required
@@ -103,10 +200,13 @@ const Checkout = () => {
             label="State"
             variant="standard"
             placeholder="Enter Your State"
+            name="State"
+            value={ user.State }
+            onChange={ data }
           />
         </Box>
 
-        <Box sx={{ marginTop: "18px" }}>
+        {/* <Box sx={{ marginTop: "18px" }}>
           <Typography variant="h5" gutterBottom>
             Payment Method
           </Typography>
@@ -125,9 +225,9 @@ const Checkout = () => {
               />
             </RadioGroup>
           </FormControl>
-        </Box>
-        <button className="w-full bg-yellow-400 text-black text-2xl font-medium mt-5 mb-5 p-2 hover:bg-yellow-300">
-          Place Order
+        </Box> */}
+        <button className="w-full bg-yellow-400 text-black text-2xl font-medium mt-5 mb-5 p-2 hover:bg-yellow-300" onClick={ getdata }>
+          Continue To Payment Page
         </button>
       </div>
       <Footer />
