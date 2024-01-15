@@ -1,15 +1,13 @@
-import React, { useState, useContext } from "react";
-import logo from "../assets/images/logo.jpg";
-import Box from "@mui/material/Box";
+import { Disclosure, Menu } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Link, useNavigate } from "react-router-dom";
 import Badge from "@mui/material/Badge";
-import { ShopContext } from "../context/shop-context";
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import React, { useContext, useState } from "react";
+import { useAlert } from 'react-alert';
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/images/logo.jpg";
 import AuthContext from "../context/AuthProvider";
-import { useAlert } from 'react-alert'
+import { ShopContext } from "../context/shop-context";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Products", href: "#products" },
@@ -54,6 +52,15 @@ const Header = () => {
     (acc, curr) => acc + curr,
     0
   );
+
+  const handleCartClick = () => {
+    if (cartItemsCount === 0) {
+      alert.show('Your cart is empty');
+      navigate('/')
+    } else {
+      navigate('/cart');
+    }
+  };
 
   // Home;
   // Products;
@@ -115,8 +122,8 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  <Badge badgeContent={cartItemsCount} color="primary">
-                    <Link to="/cart">
+                  <Badge badgeContent={cartItemsCount} color="primary"  onClick={ handleCartClick } >
+                    <Link>
                       <button
                         type="button"
                         className="relative rounded-full bg-white p-1 text-yellow-400 hover:text-yellow-500 "

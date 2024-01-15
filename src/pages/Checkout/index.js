@@ -11,6 +11,7 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Footer from "../../components/Footer";
 import AuthContext from "../../context/AuthProvider";
+import { useNavigate } from "react-router-dom";
 const Checkout = () => {
   let authorize = false
   const { auth,setAuth } = useContext(AuthContext)
@@ -19,6 +20,8 @@ const Checkout = () => {
   }else{
     authorize=true
   }
+
+
   return (
     <>
       <nav className="w-full container mx-auto flex justify-center items-center py-2 shadow-md">

@@ -15,9 +15,11 @@ import delivery from "../../assets/icons/freeDelivery.png";
 import price from "../../assets/icons/betterPrice.png";
 import freeliving from "../../assets/icons/preservative.png";
 import artifical from "../../assets/icons/noArtificial.png";
+import Header from "../../components/Header";
 const About = () => {
   return (
     <>
+      <Header />
       <nav className="w-full container mx-auto flex justify-center items-center py-2 shadow-md">
         <Link to="/">
           <img className="w-14 rounded-full" src={Logo} alt="logo" />
