@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import { PRODUCTS } from "../../products";
 import { ShopContext } from "../../context/shop-context";
 import CartItem from "../Cart/cartItem";
@@ -10,6 +10,12 @@ const Cart = () => {
   const totalAmount = getTotalCartAmount();
 
   const navigate = useNavigate();
+  useEffect(() => {
+    // Check if totalAmount becomes 0, then navigate to '/'
+    if (totalAmount === 0) {
+      navigate("/");
+    }
+  }, [totalAmount, navigate]);
   return (
     <>
       <div className="cart container mx-auto mt-5">

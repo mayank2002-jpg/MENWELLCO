@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState,useContext } from "react";
+import { Link , useNavigate} from "react-router-dom";
 import Logo from "../../assets/images/logo.jpg";
 import TextField from "@mui/material/TextField";
 import OtpInput from "otp-input-react";
@@ -9,14 +9,20 @@ import Button from "@mui/material/Button";
 import Footer from "../../components/Footer";
 import PhoneInput from "react-phone-input-2"
 import "react-phone-input-2/lib/style.css";
-import {auth} from "../../firebase.config";
+import {authfirebase} from "../../firebase.config";
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 import { toast, Toaster } from "react-hot-toast";
+import AuthContext from "../../context/AuthProvider";
+import { useAlert } from 'react-alert'
+
 const Login = () => {
+  const alert = useAlert()
+  const { setAuth } =useContext(AuthContext)
   const [otp,setOtp] = useState("")
   const [ph,setPh] = useState("")
   const [showOtp,setShowOtp] = useState(false)
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   function onCaptchVerify() {
     if (!window.recaptchaVerifier) {
@@ -29,7 +35,7 @@ const Login = () => {
           },
           "expired-callback": () => {},
         },
-        auth
+        authfirebase
       );
     }
   }
@@ -41,7 +47,7 @@ const Login = () => {
 
     const formatPh = "+" + ph;
 
-    signInWithPhoneNumber(auth, formatPh, appVerifier)
+    signInWithPhoneNumber(authfirebase, formatPh, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
         setShowOtp(true);
@@ -49,6 +55,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        alert.error("Some Problem")
       });
   }
 
@@ -58,9 +65,13 @@ const Login = () => {
       .then(async (res) => {
         console.log(res);
         setUser(res.user);
+        setAuth(res.user);
+        navigate('/')
+        alert.success("successfully logged in")
       })
       .catch((err) => {
         console.log(err);
+        alert.error("Some Problem")
       });
   }
 
