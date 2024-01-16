@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.jpg";
 import { Typography } from "@mui/material";
-import aging from "../../assets/images/aging.avif";
+import blog from "../../assets/images/blog1.jpg";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const blog1 = () => {
@@ -15,55 +15,50 @@ const blog1 = () => {
       </nav>
       <div className="container mx-auto mt-5 p-6">
         <Typography variant="h3" gutterBottom>
-          Want to Reduce Aging?
+          The Impact of Diet and Exercise on Men's Sexual Health
         </Typography>
-        <img className="sm:w-full h-1/2" src={aging} alt="aging" />
+        <img className="sm:w-full h-1/2" src={blog} alt="aging" />
         <p className="text-xl mt-10 sm:px-20">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab laudantium
-          voluptatibus totam in quos quia, itaque minima natus eveniet aut iure,
-          corrupti repellat deserunt nostrum nulla iste! Alias ad minima
-          voluptate, et hic officiis. Adipisci quod excepturi modi, illo eum
-          impedit, at quam autem harum reiciendis cupiditate est incidunt minima
-          quaerat. Aliquid sequi quaerat pariatur sit! Consequuntur, natus nobis
-          porro soluta aliquam in eos. Vero vitae, voluptatem rem id, nobis
-          quam, nulla cupiditate voluptatum ipsam ullam dolorum eaque
-          consequatur quis debitis provident eum porro? Quaerat quas velit
-          reiciendis enim suscipit dignissimos nisi assumenda voluptatem sunt
-          aperiam! Odit dignissimos dolor maiores? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Veniam temporibus quidem iusto quas iste
-          vero nam cupiditate ipsum aut a natus, sit id cum reprehenderit omnis
-          voluptatem. Minus incidunt voluptas, cum exercitationem repudiandae
-          atque sunt! Praesentium ipsam expedita illo. Laudantium asperiores
-          impedit enim cumque porro incidunt quam molestiae totam laborum
-          voluptas temporibus quo repellendus optio deleniti est rem error,
-          quidem possimus? Error nihil iste animi omnis inventore officiis
-          sapiente, veritatis dolores, accusamus ut consectetur adipisci
-          repellat doloribus sit molestias ex, sint excepturi quasi nisi.
-          Delectus quae, dolorem unde facilis quis doloremque facere,
-          aspernatur, quasi quidem ipsam repudiandae deserunt neque iusto. Lorem
-          ipsum dolor sit amet consectetur, adipisicing elit. Excepturi vel at
-          adipisci aut commodi cupiditate expedita numquam quam ipsa. Officiis,
-          corrupti recusandae ad ipsa maxime architecto earum, sint natus
-          obcaecati, ex laboriosam? Praesentium officiis sit doloribus mollitia
-          voluptatum enim eum nihil unde distinctio magnam nesciunt sint,
-          obcaecati nobis laboriosam tenetur deleniti odio nostrum voluptatem
-          laborum. Consequatur in magni repellendus omnis odio. Iste est
-          temporibus cupiditate, in soluta et illo dolor modi veritatis esse
-          architecto quis autem eveniet hic, consequuntur reprehenderit rerum
-          corporis, recusandae minima ipsam quo aperiam obcaecati optio. Omnis
-          magni dolore voluptates harum repellat explicabo ex fugiat beatae id.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          dolorem temporibus sunt, facere nobis eveniet repudiandae maiores
-          minima est velit aliquam voluptates corporis, quos vel quo repellendus
-          id. Provident quisquam explicabo quis aspernatur vitae aut itaque ut
-          facere praesentium rerum eveniet repellat odio eum libero eos sunt
-          sequi, repellendus minima, nulla maiores et fuga unde nostrum?
-          Similique ducimus atque voluptates quae possimus. Iusto eius nesciunt
-          dolores eum velit odio aperiam tempore maxime a nemo eveniet,
-          accusantium animi corrupti. Expedita debitis exercitationem
-          voluptatibus culpa repudiandae suscipit ea magni doloremque fugiat
-          sequi neque eligendi aperiam mollitia provident, eaque excepturi
-          magnam. Itaque, eaque.
+          Welcome to the Menwell Co. blog, where we believe that true wellness
+          goes beyond the ordinary. Today, we delve into the intricacies of
+          men's sexual health, exploring how the choices we make in our daily
+          lives—specifically, diet and exercise—can significantly impact our
+          overall well-being.
+          <br />
+          <b> 1. Nutrient-Rich Diets for Sexual Vigor:</b> When it comes to
+          men's sexual health, what you eat matters. Dive into the world of
+          foods that boost testosterone, such as lean meats, nuts, and fatty
+          fish. Discover the benefits of antioxidants found in berries, dark
+          chocolate, and leafy greens, combating oxidative stress and supporting
+          your sexual vitality. And don't forget the simple act of staying
+          hydrated, a crucial factor in maintaining optimal blood flow.
+          <br />
+          <b>2. Exercise: A Catalyst for Sexual Well-Being:</b> Move your way to
+          better sexual health through exercise. Cardiovascular activities like
+          running and cycling enhance blood circulation, contributing to
+          stronger and longer-lasting erections. Explore the connection between
+          strength training and testosterone levels, building not just muscles
+          but also desire. Uncover the holistic benefits of yoga, fostering a
+          strong mind-body connection and promoting sexual function.
+          <br />
+          <b>3. Balancing Act: Finding the Right Mix: </b>Recognize that
+          everyone is unique, and there's no one-size-fits-all approach to diet
+          and exercise. Personalize your wellness journey to suit your
+          preferences and health conditions. Delve into stress management
+          techniques and understand their role in supporting a healthy libido.
+          Remember, achieving balance is key to unlocking your full sexual
+          potential.
+          <br />
+          <b>Conclusion:</b> As we navigate the intricate relationship between
+          diet, exercise, and men's sexual health, it becomes clear that the
+          choices we make are fundamental to our overall well-being. At Menwell
+          Co., we're committed to supporting you on this journey. Our aim is to
+          provide insights, products, and resources that empower you in
+          achieving optimal sexual wellness. Because here, we understand that
+          true fulfillment and vibrancy extend beyond the surface—into every
+          facet of your life. Embrace a nutrient-rich diet, make exercise a part
+          of your routine, and find the balance that suits you. Your journey to
+          a more fulfilling and vibrant sexual life starts here with Menwell Co.
         </p>
 
         <Link to="/">
