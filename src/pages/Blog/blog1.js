@@ -4,6 +4,7 @@ import Logo from "../../assets/images/logo.jpg";
 import { Typography } from "@mui/material";
 import blog from "../../assets/images/blog1.jpg";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import "../../index.css";
 
 const blog1 = () => {
   return (

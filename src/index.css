@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
 .react-tel-input .form-control {
     @apply !w-full py-6 !text-base;
 }
@@ -12,7 +14,9 @@ html {
     scroll-behavior: smooth;
 }
 
-
+p {
+    font-family: 'Josefin Sans';
+}
 
 
 /* #banner {
